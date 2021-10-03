@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const players = ['wes', 'sarah', 'ryan', 'poppy']
+    const team = players // team은 players를 참조하는 객체
+    console.log(players, team)
+    
+    team[3] = 'lux' // 참조하는 것을 바꾸면 타고 들어가서 오리지널을 바꿈
+    console.log(players, team) // 둘다 lux로 변함
+
+    //////////////////////////////////////////////////////
+    //copy하는 방법
+    const team2 = players.slice(); // copy하는 방법 (slice(2,3)은 index가 2이상3미만 슬라이스, 공백은 전체)
+    const team3 = [].concat(players)
+    const team4 = [...players]; //ES6
+    const team5 = Array.from(players)
+
+
+    /////////////////////////////////////////////////////////////
+    //Object
+
+    const person = {
+      name: 'Wes',
+      age: 80
+    }
+
+    const caption = person;
+    caption.number = 99; // 오리지널도 99로 바뀜
+
+    ////////////////////////////////////////////////////////////
+    // Object copy(shallow)
+    const cap2 = Object.assign({}, person, { number:99, age:12 }) // override 가능
+    const cap3 = {...person}
+
+    //deep copy
+    const wes = {
+      name: 'wes',
+      age: 100,
+      social: {
+        twitter: '@wesbos',
+        facebook: 'wesbos.developer'
+      }
+    }
+
+    const dev = Object.assign({}, wes);
+    // dev.name = 'Wesley' //는 안바뀜
+    dev.social.twitter = '@coolman' //이건 바뀌어버림..
+
+    const dev2 = JSON.parse(JSON.stringify(wes)); // deep copy
+    // json을 스트링 형태로 복사하고 파싱해서 변수에 저장
+
+  </script>
+</body>
+</html>
