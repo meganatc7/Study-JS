@@ -15,6 +15,7 @@ dropdown_btns.forEach((btn) => {
       .querySelectorAll(".dropdown-btn + .dropdown-list")
       .forEach((dropdown) => {
         if (dropdown !== e.currentTarget.nextElementSibling) {
+          console.log(dropdown);
           dropdown.classList.remove("show");
         }
       });
