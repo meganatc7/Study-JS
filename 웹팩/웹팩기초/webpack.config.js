@@ -14,6 +14,24 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      // {
+      //   test: /\.jpg$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     publicPath: './dist/',
+      //     name: '[name].[ext]?[hash]',
+      //   },
+      {
+        test: /\.jpg&/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            publicPath: './dist/',
+            name: '[name].[ext]?[hash]',
+            limit: 5000
+          }
+        }
       }
     ]
   }
