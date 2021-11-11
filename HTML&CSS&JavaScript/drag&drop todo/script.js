@@ -118,3 +118,5 @@ close_btns.forEach((btn) => {
     btn.parentElement.style.display = "none";
   });
 });
+
+const drag = 'draggable';
