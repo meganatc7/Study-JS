@@ -9,3 +9,5 @@ window.addEventListener("DOMContentLoaded", () => {
     <img src="${ww}"/>
   `;
 });
+
+console.log('hi')
