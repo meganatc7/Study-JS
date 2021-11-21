@@ -23,6 +23,9 @@ const Menu = () => {
       <p>
         <a href="#blog">Library</a>
       </p>
+      <p>
+        <a href="#test">test</a>
+      </p>
     </>
   );
 };

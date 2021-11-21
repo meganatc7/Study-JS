@@ -14,7 +14,7 @@ const WhatGPT3 = () => {
   };
 
   return (
-    <div className="gpt3__whatgpt3 section__margin" id="whpt3">
+    <div className="gpt3__whatgpt3 section__margin" id="wgpt3">
       <div className="gpt3__whatgpt3-feature">
         <Feature title="What is CPT-3" text={text.first} />
       </div>
